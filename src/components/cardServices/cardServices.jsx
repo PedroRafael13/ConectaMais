@@ -147,7 +147,7 @@ export function CardServices() {
       title: "Agente de Portaria",
       description: "Controle total de acessos com monitoramento 24h e sistema de validação facial integrado.",
     image: portariaImg,
-      link: "/agentConcierges"
+      link: "/agentConcierge"
     },
     {
       id: 2,
