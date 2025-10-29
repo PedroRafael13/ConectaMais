@@ -7,7 +7,7 @@ export default function FindUsHere({ mapContent }) {
     <S.Container>
       <S.Wrapper>
         {/* Título */}
-        <S.Title>Find Us Here</S.Title>
+        <S.Title>Encontre-nós</S.Title>
 
         {/* Cards de contato */}
         <S.ContactCardsContainer>
@@ -18,7 +18,7 @@ export default function FindUsHere({ mapContent }) {
             </S.IconWrapper>
             <S.CardContent>
               <S.CardTitle>Phone</S.CardTitle>
-              <S.CardText>(23)-456-7890</S.CardText>
+              <S.CardText>(23) 98221-4414</S.CardText>
             </S.CardContent>
           </S.ContactCard>
 
@@ -29,7 +29,7 @@ export default function FindUsHere({ mapContent }) {
             </S.IconWrapper>
             <S.CardContent>
               <S.CardTitle>Email</S.CardTitle>
-              <S.CardText>hello@contacterprotech.com</S.CardText>
+              <S.CardText>contato@conectamaistech.com</S.CardText>
             </S.CardContent>
           </S.ContactCard>
 
@@ -40,7 +40,7 @@ export default function FindUsHere({ mapContent }) {
             </S.IconWrapper>
             <S.CardContent>
               <S.CardTitle>Location</S.CardTitle>
-              <S.CardText>123 Anywhere St., Any City, 12345</S.CardText>
+              <S.CardText>R 45 19, Manaus, parque 10</S.CardText>
             </S.CardContent>
           </S.ContactCard>
         </S.ContactCardsContainer>

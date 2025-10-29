@@ -106,6 +106,15 @@ export const MapPlaceholder = styled.div`
   font-size: 18px;
   color: #999;
   font-weight: 500;
+
+    iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 `;
 
 export const MapButton = styled.button`

@@ -6,6 +6,7 @@ import StatsCondominios from "../../components/StatsCondominios/StatsCondominios
 import CondominiosGallery from "../../components/CondominiosGallery/condominiosGallery";
 import { PageContainer } from "./styled";
 import FindUsHere from "../../components/FindUsHere/FindUsHere";
+import WhyChooseUs from "../../components/WhyChooseUs/whyChooseUs";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Header />
       <Carousel />
       <HireMe />
+      <WhyChooseUs />
       <PageContainer>
         <StatsCondominios />
         <CondominiosGallery />

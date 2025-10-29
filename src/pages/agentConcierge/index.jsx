@@ -1,40 +1,39 @@
 import React from "react";
-import video from "../../video/OFICIALVIDEO.mp4";
+import { useNavigate } from "react-router-dom";
 import {
-  Container,
-  VideoBackground,
+  SectionContainer,
+  BackgroundImage,
   Overlay,
-  Content,
-  TextColumn,
-  FeaturesList,
-  FeatureItem,
+  Logo,
+  ContentBox,
   Title,
-  Description,
+  Button,
+  ArrowIcon,
 } from "./styled";
+import { Header } from "../../components/cardNav/header"
 
 export default function AgentConcierge() {
+  const navigate = useNavigate();
+
   return (
-    <Container>
-      <VideoBackground autoPlay muted loop playsInline>
-        <source src={video} type="video/mp4" />
-      </VideoBackground>
+    <>
+    <Header />
+      <SectionContainer>
+        <BackgroundImage />
+        <Overlay>
+          <Logo>
+            <span className="name">CONECTA</span>
+            <span className="plus">+</span>
+          </Logo>
 
-      <Overlay />
-
-      <Content>
-        <TextColumn>
-          <Title>Agentes de Portaria</Title>
-          <Description>
-            Sua Portaria Segura <br /> 24 Horas
-          </Description>
-        </TextColumn>
-
-        <FeaturesList>
-          <FeatureItem>Atendimento Qualificado</FeatureItem>
-          <FeatureItem>Aumento da Segurança em seu Condomínio</FeatureItem>
-          <FeatureItem>Controle de Acesso de Pessoas</FeatureItem>
-        </FeaturesList>
-      </Content>
-    </Container>
+          <ContentBox>
+            <Title>SEGURANÇA</Title>
+            <Button onClick={() => navigate("/solicitar-orcamento")}>
+              SOLICITAR PROPOSTA <ArrowIcon />
+            </Button>
+          </ContentBox>
+        </Overlay>
+      </SectionContainer>
+    </>
   );
 }

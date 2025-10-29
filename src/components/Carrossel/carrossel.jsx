@@ -13,8 +13,8 @@ import {
   Dot,
 } from "./styled";
 
-import Slide1 from "../../assets/image.png";
-import Slide2 from "../../assets/LogoHome.png";
+import Slide1 from "../../assets/imageUm.png";
+import Slide2 from "../../assets/ImagemDois.png";
 import VideoBg from "../../video/OFICIALVIDEO.mp4";
 
 export default function Carousel() {

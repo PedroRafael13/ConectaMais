@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
   HeaderContainer,
   Nav,
@@ -22,6 +23,28 @@ export const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const dropdownRefs = useRef({});
+
+  // Mapeamento de rotas para cada item do menu
+  const routeMap = {
+    "Nossa História": "/nossa-historia",
+    "Atuação Nacional": "/atuacao-nacional",
+    "Gestão de Qualidade": "/gestao-qualidade",
+    "Certificações e Premiações": "/certificacoes",
+    "Inovação": "/inovacao",
+    "Valorização dos Colaboradores": "/valorizacao-colaboradores",
+    "Responsabilidade": "/responsabilidade",
+    "Serviço 1": "/agentConcierge",
+    "Serviço 2": "/servicos/servico-2",
+    "Serviço 3": "/servicos/servico-3",
+    "Segmento 1": "/segmentos/segmento-1",
+    "Segmento 2": "/segmentos/segmento-2",
+    "Segmento 3": "/segmentos/segmento-3",
+    "Portal 1": "/portal/portal-1",
+    "Portal 2": "/portal/portal-2",
+    "Email": "/contato/email",
+    "Telefone": "/contato/telefone",
+    "Localização": "/contato/localizacao",
+  };
 
   const menuItems = {
     Empresa: [
@@ -72,9 +95,11 @@ export const Header = () => {
   return (
     <HeaderContainer>
       <Nav>
-        {/* 🔹 LOGO corrigida */}
+        {/* 🔹 LOGO com Link */}
         <Logo>
-          <img src={LogoOne} alt="Logo Conecta Mais" />
+          <Link to="/">
+            <img src={LogoOne} alt="Logo Conecta Mais" />
+          </Link>
         </Logo>
 
         {/* 🔹 MENU centralizado */}
@@ -92,7 +117,7 @@ export const Header = () => {
                 <Dropdown>
                   {menuItems[item].map((sub) => (
                     <DropdownItem key={sub} onClick={closeAll}>
-                      {sub}
+                      <Link to={routeMap[sub] || "#"}>{sub}</Link>
                     </DropdownItem>
                   ))}
                 </Dropdown>
@@ -130,7 +155,7 @@ export const Header = () => {
               <MobileDropdown>
                 {menuItems[item].map((sub) => (
                   <MobileDropdownItem key={sub} onClick={closeAll}>
-                    {sub}
+                    <Link to={routeMap[sub] || "#"}>{sub}</Link>
                   </MobileDropdownItem>
                 ))}
               </MobileDropdown>
