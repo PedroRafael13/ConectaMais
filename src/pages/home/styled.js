@@ -2,6 +2,13 @@ import { styled } from "styled-components";
 
 //  background : #3570D9;
 
+export const PageContainer = styled.main`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+`;
+
 export const Background = styled.div`
     `
 
