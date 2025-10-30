@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { FaArrowRight } from "react-icons/fa";
 import bgImage from "../../assets/PortariaRemota.jpg";
 
@@ -111,3 +111,180 @@ export const Button = styled.button`
 export const ArrowIcon = styled(FaArrowRight)`
   font-size: 1rem;
 `;
+
+const fadeInUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+export const fadeInLeft = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
+export const fadeInRight = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
+export const scaleIn = keyframes`
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+`;
+
+// Styled Components
+export const PageContainer = styled.div`
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  font-family: 'Roboto', sans-serif;
+`;
+
+export const Header = styled.header`
+  text-align: center;
+  margin-bottom: 5rem;
+  animation: ${fadeInUp} 0.8s ease-out;
+`;
+
+export const MainTitle = styled.h1`
+  font-size: 3rem;
+  font-weight: 700;
+  color: #004b6d;
+  margin: 0 0 1rem 0;
+  letter-spacing: 2px;
+  
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+`;
+
+export const Subtitle = styled.p`
+  font-size: 1.1rem;
+  color: #5a5a5a;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+`;
+
+export const Section = styled.section`
+  display: grid;
+  grid-template-columns: ${props => props.reverse ? '1fr 1fr' : '1fr 1fr'};
+  gap: 4rem;
+  margin-bottom: 5rem;
+  align-items: center;
+  
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+`;
+
+export const TextContent = styled.div`
+  animation: ${props => props.animateLeft ? fadeInLeft : fadeInRight} 0.8s ease-out;
+  order: ${props => props.order || 0};
+  
+  @media (max-width: 968px) {
+    order: 2;
+  }
+`;
+
+export const ImageContent = styled.div`
+  animation: ${props => props.animateLeft ? fadeInLeft : fadeInRight} 0.8s ease-out;
+  order: ${props => props.order || 0};
+  
+  @media (max-width: 968px) {
+    order: 1;
+  }
+`;
+
+export const SectionTitle = styled.h2`
+  font-size: 2rem;
+  font-weight: 700;
+  color: #004b6d;
+  margin: 40px 0 1.5rem 0;
+  line-height: 1.3;
+`;
+
+export const Paragraph = styled.p`
+  font-size: 1rem;
+  color: #5a5a5a;
+  line-height: 1.8;
+  margin: 0 0 1.5rem 0;
+`;
+
+export const List = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+`;
+
+export const ListItem = styled.li`
+  font-size: 1rem;
+  color: #5a5a5a;
+  line-height: 1.8;
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.8rem;
+  
+  &:before {
+    content: '•';
+    color: #00b5ad;
+    font-weight: bold;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -4px;
+  }
+`;
+
+export const Image = styled.img`
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+`;
+
+export const Card = styled.div`
+  background: #f8f9fa;
+  padding: 2.5rem;
+  border-radius: 8px;
+  margin-bottom: 3rem;
+  animation: ${scaleIn} 0.8s ease-out;
+  border-left: 4px solid #00b5ad;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px rgba(0, 181, 173, 0.1);
+  }
+`
