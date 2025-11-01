@@ -33,9 +33,13 @@ export const Header = () => {
     "Inovação": "/inovacao",
     "Valorização dos Colaboradores": "/valorizacao-colaboradores",
     "Responsabilidade": "/responsabilidade",
-    "Serviço 1": "/agentConcierge",
-    "Serviço 2": "/servicos/servico-2",
+
+
+    "Agente de Portaria": "/agentConcierge",
+    "Remote": "/remote",
     "Serviço 3": "/servicos/servico-3",
+
+
     "Segmento 1": "/segmentos/segmento-1",
     "Segmento 2": "/segmentos/segmento-2",
     "Segmento 3": "/segmentos/segmento-3",
@@ -56,10 +60,10 @@ export const Header = () => {
       "Valorização dos Colaboradores",
       "Responsabilidade",
     ],
-    Serviços: ["Serviço 1", "Serviço 2", "Serviço 3"],
-    Segmentos: ["Segmento 1", "Segmento 2", "Segmento 3"],
+    "Serviços": ["Agente de Portaria", "Portaria Remota", "Sergurança"],
+   ' Segmentos': ["Segmento 1", "Segmento 2", "Segmento 3"],
     "Portal do Colaborador": ["Portal 1", "Portal 2"],
-    Contato: ["Email", "Telefone", "Localização"],
+   ' Contato': ["Email", "Telefone", "Localização"],
   };
 
   const socialMedia = [

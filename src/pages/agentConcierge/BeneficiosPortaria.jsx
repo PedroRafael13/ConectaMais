@@ -11,7 +11,7 @@ import {
 
 import { FaUserShield, FaClock, FaShieldAlt, FaTools } from "react-icons/fa";
 
-export default function BeneficiosPortaria() {
+export default function BeneficiosRemoto() {
   return (
     <SectionContainer>
       <SectionTitle>Benefícios dos Agentes de Portaria</SectionTitle>
