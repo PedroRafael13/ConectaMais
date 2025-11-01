@@ -36,8 +36,8 @@ export const Header = () => {
 
 
     "Agente de Portaria": "/agentConcierge",
-    "Remote": "/remote",
-    "Serviço 3": "/servicos/servico-3",
+    "Portaria Remota": "/remote",
+    "Sergurança": "/sefety" ,
 
 
     "Segmento 1": "/segmentos/segmento-1",

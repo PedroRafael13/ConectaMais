@@ -34,11 +34,6 @@ export default function AgentConcierge() {
       <SectionContainer>
         <BackgroundImage />
         <Overlay>
-          <Logo>
-            <span className="name">CONECTA</span>
-            <span className="plus">+</span>
-          </Logo>
-
           <ContentBox>
             <Title>SEGURANÇA</Title>
             <Button onClick={() => navigate("/solicitar-orcamento")}>
